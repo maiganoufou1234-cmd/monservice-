@@ -3,115 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mon Service BF</title>
+
+<title>MAÏGA SERVICE</title>
 
 <style>
-<head>
-<meta charset="UTF-8">
-<title>Maïga Service</title>
 
-<style>
-.card{
-background:#fff;
-padding:20px;
-margin:20px auto;
-max-width:900px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+color:#222;
+}
+
+header{
+background:#0a2d6b;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.logo span{
+color:#25c04b;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:10px;
+font-weight:bold;
+}
+
+.hero{
+background:linear-gradient(to right,#0a2d6b,#0a7d35);
+color:white;
+padding:40px 20px;
 text-align:center;
 }
 
-.card h2{
-color:#0a7d35;
+.hero h1{
+font-size:40px;
 margin-bottom:15px;
 }
 
-.card p{
-font-size:18px;
-margin:10px 0;
+.hero p{
+font-size:20px;
+margin-bottom:20px;
 }
-</style>
 
-</head>
-</style>
+.btn{
+display:inline-block;
+padding:15px 25px;
+background:#25D366;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
 
+section{
+padding:30px 15px;
+}
+
+h2{
+text-align:center;
+margin-bottom:20px;
+color:#0a2d6b;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+}
+
+.card h3{
+margin:15px 0;
+color:#0a7d35;
+}
+
+.card p{
+line-height:1.6;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.product{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+text-align:center;
+padding-bottom:15px;
+}
+
+.product img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:red;
+margin:10px;
+}
+
+.whatsapp{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:10px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+background:#0a2d6b;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+
+</style>
 </head>
 
 <body>
-<!-- Avis clients -->
-<section class="card">
-<h2>⭐ Avis clients</h2>
 
-<p>⭐⭐⭐⭐⭐ "Très satisfait de mon réfrigérateur. Livraison rapide !" - Moussa</p>
-
-<p>⭐⭐⭐⭐⭐ "Service professionnel et prix abordables." - Awa</p>
-
-<p>⭐⭐⭐⭐⭐ "Je recommande Maïga Service à tout le monde." - Ibrahim</p>
-</section>
-
-<!-- Horaires -->
-<section class="card">
-<h2>🕒 Horaires d'ouverture</h2>
-
-<p>Lundi - Samedi : 08h00 - 18h30</p>
-<p>Dimanche : Fermé</p>
-</section>
-
-<!-- Paiement -->
-<section class="card">
-<h2>💳 Moyens de paiement</h2>
-
-<p>✅ Orange Money</p>
-<p>✅ Moov Money</p>
-<p>✅ Espèces</p>
-</section>
-
-<!-- Localisation -->
-<section class="card">
-<h2>📍 Notre adresse</h2>
-
-<p>Bassinko, Ouagadougou - Burkina Faso</p>
-
-<iframe
-src="https://www.google.com/maps?q=Bassinko,Ouagadougou&output=embed"
-width="100%"
-height="300"
-style="border:0;border-radius:12px;"
-loading="lazy">
-</iframe>
-
-</section>
-<div style="text-align:center;">
-  <img src="banner.png" alt="Maïga Service"
-       style="width:100%; max-width:1200px; border-radius:15px;">
-</div>
 <header>
-<h1>Mon Service BF</h1>
-<p>Votre partenaire numérique à Ouagadougou (Bassinko)</p>
+
+<div class="logo">
+MAÏGA <span>SERVICE</span>
+</div>
+
+<nav>
+
+<a href="#">Accueil</a>
+
+<a href="#">Services</a>
+
+<a href="#">Boutique</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
 </header>
+
+<section class="hero">
+
+<h1>MAÏGA SERVICE</h1>
+
+<p>
+Votre partenaire de confiance pour les services numériques et la vente d'équipements de qualité.
+</p>
+
+<a class="btn" href="https://wa.me/22655325530">
+Discuter sur WhatsApp
+</a>
+
+</section>
 
 <section>
 
+<h2>Nos Services</h2>
+
+<div class="services">
+
 <div class="card">
-<h2>Nos services</h2>
+<h3>🌐 Création de sites web</h3>
+<p>Sites modernes, rapides et sécurisés.</p>
+</div>
 
-<h3>🛒 Vente de produits</h3>
+<div class="card">
+<h3>🤖 Images IA</h3>
+<p>Images professionnelles générées par IA.</p>
+</div>
 
-<p>📺 Téléviseurs</p>
-<p>❄️ Réfrigérateurs</p>
-<p>🛏️ Matelas</p>
-<p>☀️ Lampes solaires</p>
-<p>🔋 Panneaux solaires</p>
-<p>🧳 Valises</p>
-<p>🍽️ Plaques de cuisson</p>
-<p>🪑 Meubles</p>
-<p>🌀 Ventilateurs</p>
-<p>🔌 Rallonges électriques</p>
-<p>💡 Ampoules LED</p>
-<p>📦 Livraison disponible</p>
-<h2>🛒 Boutique</h2>
-<p>Nous vendons des produits de qualité à des prix compétitifs.</p>
+<div class="card">
+<h3>📱 Développement d'applications</h3>
+<p>Applications Android et Web.</p>
+</div>
 
-<a class="btn" href="https://wa.me/22655325530">
-📦 Commander sur WhatsApp
-</a>
+<div class="card">
+<h3>🎨 Logos modernes</h3>
+<p>Création d'identité visuelle professionnelle.</p>
+</div>
+
+</div>
+
+</section>
