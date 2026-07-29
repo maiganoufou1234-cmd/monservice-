@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MAÏGA SERVICE | Vente et Services au Burkina Faso</title>
+<title>MAÏGA SERVICE | Vente d'équipements et services numériques</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <style>
 
@@ -12,387 +15,463 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f4f4f4;
+background:#f5f7fb;
 color:#222;
 }
 
 header{
-background:#0a2d6b;
+background:#0b2c6f;
 color:white;
-padding:15px;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
+padding:15px;
+max-width:1200px;
+margin:auto;
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 }
 
 .logo span{
-color:#25c04b;
+color:#27c24c;
 }
 
-nav a{
+.menu a{
 color:white;
 text-decoration:none;
-margin:10px;
+margin-left:20px;
 font-weight:bold;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#29d85d;
 }
 
 .hero{
-background:linear-gradient(to right,#0a2d6b,#0a7d35);
-color:white;
-padding:40px 20px;
+background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1600");
+background-size:cover;
+background-position:center;
+padding:90px 20px;
 text-align:center;
+color:white;
 }
 
 .hero h1{
-font-size:40px;
-margin-bottom:15px;
+font-size:52px;
+margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
-margin-bottom:20px;
+font-size:22px;
+max-width:700px;
+margin:auto;
+line-height:1.7;
+}
+
+.buttons{
+margin-top:35px;
 }
 
 .btn{
 display:inline-block;
-padding:15px 25px;
+padding:15px 30px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin:10px;
+transition:.3s;
+}
+
+.whatsapp{
 background:#25D366;
 color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
+}
+
+.call{
+background:white;
+color:#0b2c6f;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 section{
-padding:30px 15px;
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
 }
 
 h2{
+font-size:38px;
+color:#0b2c6f;
+margin-bottom:30px;
 text-align:center;
-margin-bottom:20px;
-color:#0a2d6b;
 }
 
-.services{
+.cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+border-radius:18px;
+padding:25px;
 text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.card h3{
-margin:15px 0;
-color:#0a7d35;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.card p{
-line-height:1.6;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
-
-.product{
-background:white;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-text-align:center;
-padding-bottom:15px;
-}
-
-.product img{
+.card img{
 width:100%;
 height:180px;
 object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.card h3{
+margin:10px 0;
+font-size:25px;
 }
 
 .price{
-font-size:22px;
-font-weight:bold;
 color:red;
-margin:10px;
+font-weight:bold;
+font-size:22px;
+margin:12px 0;
 }
 
-.whatsapp{
+.buy{
 display:inline-block;
 background:#25D366;
 color:white;
-padding:10px 20px;
-border-radius:8px;
+padding:12px 25px;
+border-radius:7px;
 text-decoration:none;
 font-weight:bold;
 }
 
-footer{
-background:#0a2d6b;
-color:white;
+.buy:hover{
+background:#1fb659;
+}
+
+.service-box{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:20px;
+}
+
+.service{
+background:white;
+padding:25px;
+border-radius:15px;
 text-align:center;
-padding:20px;
-margin-top:30px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.service:hover{
+transform:translateY(-6px);
+}
+
+.service span{
+font-size:50px;
+display:block;
+margin-bottom:15px;
+}
+
+.service h3{
+color:#0b2c6f;
+margin-bottom:10px;
+}
+footer{
+background:#0b2c6f;
+color:white;
+padding:40px 20px;
+text-align:center;
+margin-top:40px;
+}
+
+footer a{
+color:#25D366;
+text-decoration:none;
+}
+
+.float-whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+z-index:999;
+}
+
+.top{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#0b2c6f;
+color:white;
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+font-size:24px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.menu{
+display:none;
+}
+
 }
 
 </style>
+
 </head>
 
-<body>
+<body id="top">
 
 <header>
+
+<nav>
 
 <div class="logo">
 MAÏGA <span>SERVICE</span>
 </div>
 
-<nav>
+<div class="menu">
 
-<a href="#">Accueil</a>
+<a href="#accueil">Accueil</a>
 
-<a href="#">Services</a>
+<a href="#services">Services</a>
 
-<a href="#">Boutique</a>
+<a href="#produits">Produits</a>
 
-<a href="#">Contact</a>
+<a href="#contact">Contact</a>
+
+</div>
 
 </nav>
 
 </header>
 
-<section class="hero">
+<section class="hero" id="accueil">
 
-<h1>MAÏGA SERVICE</h1>
+<h1>Bienvenue chez MAÏGA SERVICE</h1>
 
 <p>
-Votre partenaire de confiance pour les services numériques et la vente d'équipements de qualité.
+Votre partenaire de confiance pour les équipements électroménagers, les solutions solaires et les services numériques.
 </p>
 
-<a class="btn" href="https://wa.me/22655325530">
-Discuter sur WhatsApp
+<div class="buttons">
+
+<a class="btn whatsapp"
+href="https://wa.me/22655325530">
+
+💬 WhatsApp
+
 </a>
+
+<a class="btn call"
+href="tel:+22655325530">
+
+📞 Appeler
+
+</a>
+
+</div>
 
 </section>
 
-<section>
+<section id="services">
 
 <h2>Nos Services</h2>
 
-<div class="services">
+<div class="service-box">
+
+<div class="service">
+
+<span>🌐</span>
+
+<h3>Création de sites web</h3>
+
+<p>Sites modernes et rapides.</p>
+
+</div>
+
+<div class="service">
+
+<span>📱</span>
+
+<h3>Applications mobiles</h3>
+
+<p>Applications Android professionnelles.</p>
+
+</div>
+
+<div class="service">
+
+<span>🤖</span>
+
+<h3>Images IA</h3>
+
+<p>Création d'images professionnelles.</p>
+
+</div>
+
+<div class="service">
+
+<span>🎨</span>
+
+<h3>Logos</h3>
+
+<p>Création de logos modernes.</p>
+
+</div>
+
+</div>
+
+</section>
+<section id="produits">
+
+<h2>🛒 Nos Produits</h2>
+
+<div class="cards">
 
 <div class="card">
-<h3>🌐 Création de sites web</h3>
-<p>Sites modernes, rapides et sécurisés.</p>
+<img src="images/tv.jpg" alt="Téléviseur">
+<h3>📺 Téléviseur Smart</h3>
+<p>Écran HD, Full HD et Smart TV.</p>
+<div class="price">À partir de 120 000 FCFA</div>
+<a class="buy" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un téléviseur.">Commander</a>
 </div>
 
 <div class="card">
-<h3>🤖 Images IA</h3>
-<p>Images professionnelles générées par IA.</p>
+<img src="images/refrigerateur.jpg" alt="Réfrigérateur">
+<h3>❄️ Réfrigérateur</h3>
+<p>Réfrigérateurs économes en énergie.</p>
+<div class="price">À partir de 180 000 FCFA</div>
+<a class="buy" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un réfrigérateur.">Commander</a>
 </div>
 
 <div class="card">
-<h3>📱 Développement d'applications</h3>
-<p>Applications Android et Web.</p>
+<img src="images/panneau-solaire.jpg" alt="Panneau solaire">
+<h3>☀️ Panneaux solaires</h3>
+<p>Énergie solaire fiable pour votre maison.</p>
+<div class="price">À partir de 150 000 FCFA</div>
+<a class="buy" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un panneau solaire.">Commander</a>
 </div>
 
 <div class="card">
-<h3>🎨 Logos modernes</h3>
-<p>Création d'identité visuelle professionnelle.</p>
+<img src="images/lampe-solaire.jpg" alt="Lampe solaire">
+<h3>💡 Lampe solaire</h3>
+<p>Éclairage économique
+<section id="promotions">
+
+<h2>🔥 Promotions de la semaine</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📺 Smart TV</h3>
+<p>Profitez de nos réductions exceptionnelles.</p>
+<div class="price">-15%</div>
 </div>
 
+<div class="card">
+<h3>☀️ Panneaux solaires</h3>
+<p>Installation disponible sur demande.</p>
+<div class="price">Offre spéciale</div>
 </div>
 
-<section>
-
-<h2>🛒 Vente de produits</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600" alt="Téléviseur">
-<h3>📺 Téléviseurs</h3>
-<div class="price">120 000 FCFA</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un téléviseur.">
-Commander
-</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=600" alt="Réfrigérateur">
-<h3>❄️ Réfrigérateurs</h3>
-<div class="price">200 000 FCFA</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un réfrigérateur.">
-Commander
-</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600" alt="Matelas">
+<div class="card">
 <h3>🛏️ Matelas</h3>
-<div class="price">40 000 FCFA</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un matelas.">
-Commander
-</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=600" alt="Lampe solaire">
-<h3>☀️ Lampes solaires</h3>
-<div class="price">10 000 FCFA</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander une lampe solaire.">
-Commander
-</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600" alt="Panneaux solaires">
-<h3>🔋 Panneaux solaires</h3>
-<div class="price">150 000 FCFA</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un panneau solaire.">
-Commander
-</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Valises">
-<h3>🧳 Valises</h3>
-<div class="price">15 000 FCFA</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander une valise.">
-Commander
-</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1586208958839-06c17cacdf08?w=600" alt="Plaques de cuisson">
-<h3>🍳 Plaques de cuisson</h3>
-<div class="price">25 000 FCFA</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander une plaque de cuisson.">
-Commander
-</a>
-</div>
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600" alt="Meubles">
-<h3>🪑 Meubles</h3>
-<div class="price">Sur demande</div>
-<a class="whatsapp" href="https://wa.me/22655325530?text=Bonjour, je souhaite commander un meuble.">
-Commander
-</a>
-</div>
-
-</div>
-
-<section>
-<!-- Catégories -->
-<section>
-
-<h2>🛍️ Nos catégories</h2>
-
-<div class="services">
-
-<div class="card">
-<h3>☀️ Énergie solaire</h3>
-<p>Panneaux solaires, batteries, lampes solaires, onduleurs.</p>
-</div>
-
-<div class="card">
-<h3>🏠 Électroménager</h3>
-<p>Réfrigérateurs, téléviseurs, plaques de cuisson, ventilateurs.</p>
-</div>
-
-<div class="card">
-<h3>🛏️ Mobilier</h3>
-<p>Matelas, meubles, armoires et accessoires.</p>
-</div>
-
-<div class="card">
-<h3>🧳 Divers</h3>
-<p>Valises, accessoires et autres produits disponibles.</p>
+<p>Confort garanti au meilleur prix.</p>
+<div class="price">-10%</div>
 </div>
 
 </div>
 
 </section>
 
-<!-- Pourquoi nous choisir -->
-<section>
+<section id="avis">
 
-<h2>Pourquoi choisir MAÏGA SERVICE ?</h2>
+<h2>⭐ Avis de nos clients</h2>
 
-<div class="services">
+<div class="cards">
 
 <div class="card">
-<h3>✅ Qualité garantie</h3>
-<p>Des produits fiables et sélectionnés avec soin.</p>
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>"Très satisfait de mon achat. Livraison rapide."</p>
+<strong>— Moussa</strong>
 </div>
 
 <div class="card">
-<h3>🚚 Livraison rapide</h3>
-<p>Livraison à Ouagadougou et dans les environs.</p>
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>"Service sérieux et produits de qualité."</p>
+<strong>— Awa</strong>
 </div>
 
 <div class="card">
-<h3>💰 Prix compétitifs</h3>
-<p>Les meilleurs prix pour un excellent rapport qualité-prix.</p>
-</div>
-
-<div class="card">
-<h3>🤝 Service client</h3>
-<p>Nous vous accompagnons avant et après votre achat.</p>
+<h3>⭐⭐⭐⭐⭐</h3>
+<p>"Je recommande MAÏGA SERVICE à tous."</p>
+<strong>— Ibrahim</strong>
 </div>
 
 </div>
 
 </section>
 
-<!-- Promotions -->
-<section>
-
-<h2>🔥 Promotions du moment</h2>
-
-<div class="card">
-
-<h3>🎉 Offres spéciales</h3>
-
-<p>✅ Réduction sur certains téléviseurs.</p>
-
-<p>✅ Prix promotionnels sur les lampes solaires.</p>
-
-<p>✅ Remises sur les matelas sélectionnés.</p>
-
-<a class="btn" href="https://wa.me/22655325530?text=Bonjour, je souhaite connaître vos promotions.">
-
-Voir les promotions
-
-</a>
-
-</div>
-
-</section>
-
-<!-- Statistiques -->
-<section>
+<section id="statistiques">
 
 <h2>📊 MAÏGA SERVICE en chiffres</h2>
 
-<div class="services">
+<div class="cards">
 
 <div class="card">
 <h3>500+</h3>
@@ -406,176 +485,118 @@ Voir les promotions
 
 <div class="card">
 <h3>24/7</h3>
-<p>Assistance sur WhatsApp</p>
+<p>Assistance WhatsApp</p>
 </div>
 
 <div class="card">
 <h3>100%</h3>
-<p>Satisfaction de nos clients</p>
+<p>Engagement qualité</p>
 </div>
 
 </div>
-<h2>🔍 Rechercher un produit</h2>
+
+</section>
+
+<section id="contact">
+
+<h2>📞 Contact</h2>
 
 <div class="card">
 
-<input
-type="text"
-placeholder="Rechercher un produit..."
-style="width:90%;padding:15px;border-radius:10px;border:1px solid #ccc;font-size:18px;">
+<p><strong>🏢 MAÏGA SERVICE</strong></p>
+
+<p>📍 Bassinko, Ouagadougou, Burkina Faso</p>
+
+<p>📱 WhatsApp : +226 55 32 55 30</p>
+
+<p>🕒 Lundi
+<footer>
+
+<h2>MAÏGA SERVICE</h2>
+
+<p>Votre partenaire de confiance au Burkina Faso.</p>
+
+<br>
+
+<p>📍 Bassinko - Ouagadougou</p>
+
+<p>📱 WhatsApp : +226 55 32 55 30</p>
+
+<p>🌐 Création de sites web • Applications • Images IA • Vente d'équipements</p>
+
+<br>
+
+<div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;">
+
+<a class="btn whatsapp" href="https://wa.me/22655325530">
+💬 WhatsApp
+</a>
+
+<a class="btn call" href="tel:+22655325530">
+📞 Appeler
+</a>
 
 </div>
 
-<h2>🖼️ Galerie</h2>
+<br>
 
-<div class="products">
+<p style="opacity:.8;">
+© 2026 MAÏGA SERVICE - Tous droits réservés.
+</p>
 
-<div class="product">
-<img src="images/television.jpg" alt="Téléviseur">
-<h3>📺 Téléviseur</h3>
-</div>
-
-<div class="product">
-<img src="images/refrigerateur.jpg" alt="Réfrigérateur">
-<h3>❄️ Réfrigérateur</h3>
-</div>
-
-<div class="product">
-<img src="images/panneau-solaire.jpg" alt="Panneau solaire">
-<h3>☀️ Panneau solaire</h3>
-</div>
-
-<div class="product">
-<img src="images/matelas.jpg" alt="Matelas">
-<h3>🛏️ Matelas</h3>
-</div>
-
-<div class="product">
-<img src="images/valise.jpg" alt="Valise">
-<h3>🧳 Valise</h3>
-</div>
-
-<div class="product">
-<img src="images/lampe-solaire.jpg" alt="Lampe solaire">
-<h3>💡 Lampe solaire</h3>
-</div>
-
-</div>
+</footer>
 
 <a
 href="https://wa.me/22655325530"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px 18px;
-border-radius:50%;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-z-index:999;">
+class="float-whatsapp"
+title="WhatsApp">
+
 💬
+
 </a>
 
 <a
 href="#top"
-style="
-position:fixed;
-bottom:90px;
-right:20px;
-background:#0a2d6b;
-color:white;
-padding:12px 16px;
-border-radius:50%;
-text-decoration:none;
-font-size:22px;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-z-index:999;">
-⬆️
-</a>
-</section>
-<h2>⭐ Avis clients</h2>
+class="top"
+title="Retour en haut">
 
-<div class="services">
+⬆
 
-<div class="card">
-<h3>⭐⭐⭐⭐⭐</h3>
-<p>"Très satisfait de mon réfrigérateur. Livraison rapide !"</p>
-<b>- Moussa</b>
-</div>
-
-<div class="card">
-<h3>⭐⭐⭐⭐⭐</h3>
-<p>"Service professionnel et prix abordables."</p>
-<b>- Awa</b>
-</div>
-
-<div class="card">
-<h3>⭐⭐⭐⭐⭐</h3>
-<p>"Je recommande MAÏGA SERVICE à tout le monde."</p>
-<b>- Ibrahim</b>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>📍 Contact</h2>
-
-<div class="card">
-
-<p><strong>📍 Adresse :</strong> Bassinko, Ouagadougou - Burkina Faso</p>
-
-<p><strong>📞 WhatsApp :</strong> +226 55 32 55 30</p>
-
-<p><strong>📧 Email :</strong> maigaservicebf@gmail.com</p>
-
-<p><strong>🕒 Horaires :</strong> Lundi à Samedi : 08h00 - 18h30</p>
-
-<a class="btn" href="https://wa.me/22655325530">
-📲 Discuter sur WhatsApp
 </a>
 
-</div>
+<script>
 
-</section>
+const cards=document.querySelectorAll('.card,.service');
 
-<section>
+const observer=new IntersectionObserver((entries)=>{
 
-<h2>🗺️ Notre localisation</h2>
+entries.forEach(entry=>{
 
-<div class="card">
+if(entry.isIntersecting){
 
-<iframe
-src="https://www.google.com/maps?q=Bassinko,Ouagadougou,Burkina+Faso&output=embed"
-width="100%"
-height="350"
-style="border:0;border-radius:15px;"
-allowfullscreen=""
-loading="lazy">
-</iframe>
+entry.target.style.opacity="1";
 
-</div>
+entry.target.style.transform="translateY(0)";
 
-</section>
+}
 
-<footer>
+});
 
-<h3>MAÏGA SERVICE</h3>
+});
 
-<p>Qualité • Confiance • Satisfaction</p>
+cards.forEach(card=>{
 
-<p>📍 Bassinko - Ouagadougou - Burkina Faso</p>
+card.style.opacity="0";
 
-<p>📞 +226 55 32 55 30</p>
+card.style.transform="translateY(40px)";
 
-<p>© 2026 MAÏGA SERVICE - Tous droits réservés.</p>
+card.style.transition="all .8s";
 
-</footer>
+observer.observe(card);
+
+});
+
+</script>
 
 </body>
 </html>
