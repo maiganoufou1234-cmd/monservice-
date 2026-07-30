@@ -1,0 +1,323 @@
+/* ===========================
+   MAÏGA SERVICE
+   style.css
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#0b2c6f;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+header .container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.logo h2{
+color:#fff;
+font-size:30px;
+}
+
+.logo span{
+color:#28d84f;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#28d84f;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(rgba(11,44,111,.75),rgba(11,44,111,.75)),
+url("images/banner.jpg") center/cover;
+color:white;
+padding:120px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:20px;
+}
+
+.hero-buttons{
+margin-top:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin:8px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
+.btn:not(.whatsapp){
+background:white;
+color:#0b2c6f;
+}
+
+/* Sections */
+
+section{
+padding:70px 0;
+}
+
+section h2{
+text-align:center;
+font-size:38px;
+margin-bottom:40px;
+color:#0b2c6f;
+}
+/* ===== SERVICES ===== */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service{
+background:#fff;
+padding:30px 20px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.service:hover{
+transform:translateY(-10px);
+}
+
+.service .icon{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.service h3{
+color:#0b2c6f;
+margin-bottom:10px;
+font-size:24px;
+}
+
+/* ===== PRODUITS ===== */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.product{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.35s;
+}
+
+.product:hover{
+transform:translateY(-8px);
+}
+
+.product img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.product h3{
+padding:15px 20px 5px;
+color:#0b2c6f;
+font-size:24px;
+}
+
+.product p{
+padding:0 20px;
+color:#555;
+}
+
+.price{
+padding:12px 20px;
+font-size:24px;
+font-weight:bold;
+color:#e53935;
+}
+
+.buy-btn{
+display:block;
+margin:20px;
+padding:14px;
+text-align:center;
+text-decoration:none;
+background:#25D366;
+color:#fff;
+border-radius:10
+/* ===== CONTACT ===== */
+
+.contact-box{
+background:#fff;
+padding:35px;
+border-radius:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.contact-box p{
+margin:15px 0;
+font-size:18px;
+}
+
+.about-text{
+max-width:850px;
+margin:auto;
+text-align:center;
+font-size:18px;
+line-height:1.8;
+color:#555;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+background:#0b2c6f;
+color:#fff;
+padding:60px 0 20px;
+margin-top:50px;
+}
+
+.footer-content{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-links{
+list-style:none;
+padding:0;
+}
+
+.footer-links li{
+margin:12px 0;
+}
+
+.footer-links a,
+.social a{
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+.footer-links a:hover,
+.social a:hover{
+color:#25D366;
+}
+
+.social{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+footer hr{
+margin:35px 0 20px;
+border:none;
+height:1px;
+background:rgba(255,255,255,.25);
+}
+
+.copyright{
+text-align:center;
+opacity:.8;
+}
+
+/* ===== BOUTONS FLOTTANTS ===== */
+
+.floating-whatsapp,
+.back-top{
+position:fixed;
+right:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+text-decoration:none;
+font-size:28px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:999;
+transition:.3s;
+}
+
+.floating-whatsapp{
+bottom:20px;
+background:#25D366;
+color:#fff;
+}
+
+.back-top{
+bottom:95px;
+background:#
